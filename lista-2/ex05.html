@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var nomeEstudante = prompt('Nome: ')
+    var disciplina = prompt('Disciplina: ')
+    var notaProva = parseFloat(prompt('Prova: '))
+    var notaTrabalho = parseFloat(prompt('Trabalho: '))
+
+    function verificarEstudanteAbaixoDaMedia(nomeEstudante, disciplina, notaProva, notaTrabalho) {
+      var media = (notaProva + notaTrabalho) / 2
+
+      if(media >= 7) {
+        alert(nomeEstudante + ' está com as notas acima da média em ' + disciplina + ' ! Sua média foi: ' + media)
+      } else {
+        alert(nomeEstudante + ' está com abaixo da média em ' + disciplina + ' ! Sua média foi: ' + media)
+      }
+    }
+
+    verificarEstudanteAbaixoDaMedia(nomeEstudante, disciplina, notaProva, notaTrabalho)
+
+  </script>
+</body>
+
+</html>

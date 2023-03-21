@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var senhaCorreta = '0000'
+
+    for(var i = 0; i < 3; i++) {
+      var senhaDigitada = prompt('Digite uma senha:')
+    }
+
+    if(senhaDigitada !== senhaCorreta) {
+      var escolhaDoCliente = prompt('Senha incorreta. Seu cartão foi bloqueado. Se deseja ir a uma agência, digite A ou se deseja desbloquear com sua chave de segurança, digite D')
+
+      if(escolhaDoCliente == 'A') {
+        alert('Será um prazer te atender em nossas agências!')
+      } else if(escolhaDoCliente == 'D') {
+        var codigoDeSeguranca = prompt('Digite a chave de segurança que foi enviada para seu e-mail cadastrado:')
+
+        if(codigoDeSeguranca == '9999') {
+          alert('Um link para a redefinição de senha foi enviado para seu e-mail')
+        } else {
+          alert('Código inválido. Favor comparecer a uma agência.')
+        }
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>

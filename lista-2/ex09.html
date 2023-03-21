@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var valores = []
+    var soma = 0
+
+    recebeItens()
+
+    function recebeItens() {
+      prompt('item: ')
+      var valor = prompt('valor:')
+      var parar = prompt('Você deseja parar? s/n')
+
+      valores.push(valor)
+
+      if(parar == 'n') {
+        recebeItens()
+      } else {
+        for(var i = 0; i < valores.length; i++) {
+          soma = soma + Number(valores[i])
+        }
+      }
+    }
+
+    alert('Soma dos itens: ' + soma)
+
+
+  </script>
+</body>
+
+</html>

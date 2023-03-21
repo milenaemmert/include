@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var tutor = prompt('Tutor(a):')
+    var telefone = prompt('Telefone para contato:')
+
+    var pets = []
+
+    cadastraPets()
+
+    function cadastraPets() {
+      var nomePet = prompt('Nome do pet: ')
+      var especie = prompt('Qual é a espécie do seu pet?')
+      var cor = prompt('Qual é a cor do seu pet?')
+      var outroPet = prompt('Você deseja cadastrar outro pet? (s/n)')
+
+      pets.push(nomePet, especie, cor)
+
+      if(outroPet === 's') {
+        cadastraPets()
+      } else {
+        alert('Obrigada')
+      }
+    }
+
+    alert(`${tutor} seus pets são: ${pets}. Seu telefone é ${telefone}.`)
+
+
+  </script>
+
+</html>
